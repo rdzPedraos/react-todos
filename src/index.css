@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* :root{
+:root{
     --body-bg: #323339;
     --card-bg: #1e1f23;
     --input-bg: #323339;
     --text-color: #fcfeff;
     --active-color: #2591d0;
-} */
+}
 
-:root{
+/* :root{
     --body-bg: #ffffff;
     --card-bg: #eee;
     --input-bg: #b2e3ff;
     --text-color: #000000;
     --active-color: #37b6ff;
-}
+} */
 
 *{
     margin:0;
