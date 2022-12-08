@@ -1,6 +1,6 @@
 # My first proyect with React.
 
-In the past, i had created a React proyect using a api, in this app you can search all images, but I don't understand the react concepts such as useHooks, Statesfuls and Statesless, in this proyect I try apply this concepts, in a simple app.
+In the past, I had created a React project using an api, in that application you can search all the images you can imagine, but I didn't understand React concepts like useHooks, Statesfuls and Statesless, in this project I try to apply these concepts, in a simple application.
 
 ### Preview:
 <img src="assets_md/preview.png" height="300" />
