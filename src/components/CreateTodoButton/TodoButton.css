@@ -1,0 +1,27 @@
+.todo-button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2em;
+    
+    position: absolute;
+    left:0;
+    bottom:0;
+}
+
+.todo-button button{
+    background-color: inherit;
+    border: 0;
+    font-size: 3em;
+    color: var(--active-color);
+    cursor: pointer;
+}
+
+.todo-button button:hover{
+    color: var(--color-text);
+    transition: .2s all;
+    -webkit-transition: .2s all;
+    -moz-transition: .2s all;
+    -ms-transition: .2s all;
+    -o-transition: .2s all;
+}

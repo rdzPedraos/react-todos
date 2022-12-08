@@ -1,0 +1,31 @@
+.header{
+    margin-bottom: .5em;
+}
+
+.header .header-date{
+    text-align: right;
+    opacity:.5;
+    margin-bottom: .5em;
+}
+
+.header .header-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.8em;   
+}
+
+.header .header-profile-img{
+    height: 3.8em;
+    overflow: hidden;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.header-profile-img img{
+    width: 100%;
+}

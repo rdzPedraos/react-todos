@@ -1,0 +1,16 @@
+.card{
+    margin:auto;
+    width:100%;
+    max-width: 500px;
+    padding: 3em 2em;
+}
+
+.card .list-todos{
+    height: calc(100vh - 31em);
+    margin-top: 1em;
+    margin-right: -1em;
+    padding-right: 1em;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--active-color) var(--card-bg);
+}

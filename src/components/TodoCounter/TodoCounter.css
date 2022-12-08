@@ -1,0 +1,29 @@
+.header-progress-bar{
+    width: 100%;
+    height: 1.5em;
+    overflow: hidden;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+
+    background-color: aliceblue;
+}
+
+.header-progress-bar .progress-bar{
+    display: flex;
+    position: relative;
+    top:0;
+    height: 100%;
+    min-width: 2.5em;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--active-color);
+    transition: width .5s ease-in-out;
+    
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -ms-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+}
