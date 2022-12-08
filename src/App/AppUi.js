@@ -8,6 +8,8 @@ import { TodoItem } from "../components/TodoItem";
 import { Header } from "../layouts/Header";
 
 function AppUi({
+    loading,
+    error,
     completedTodos,
     todosTotalSize,
     searchValue,
@@ -51,18 +53,24 @@ function AppUi({
                     </p>
 
                     <section className="list-todos">
-                        <ul>
-                            {searchedTodos.map(todo => (
-                                <li key={todo.text}>
-                                    <TodoItem
-                                        text={todo.text}
-                                        completed={todo.completed}
-                                        onChangeState={() => setStateTodo(todo.text)}
-                                        onDelete={() => setStateTodo(todo.text, true)}
-                                    />
-                                </li>
-                            ))}
-                        </ul>
+                        { error && <p>Ha ocurrido un error! {error}</p> }
+                        { loading && <p>Cargando información...</p> }
+                        { (!loading && !searchedTodos.length) && <p>No se encontraron coincidencias...</p> }
+                        {
+                            !loading && !error &&
+                            <ul>
+                                {searchedTodos.map(todo => (
+                                    <li key={todo.text}>
+                                        <TodoItem
+                                            text={todo.text}
+                                            completed={todo.completed}
+                                            onChangeState={() => setStateTodo(todo.text)}
+                                            onDelete={() => setStateTodo(todo.text, true)}
+                                        />
+                                    </li>
+                                ))}
+                            </ul>
+                        }
                     </section>
                 </div>
 
