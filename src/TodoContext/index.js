@@ -6,6 +6,7 @@ const TodoContext = React.createContext();
 function TodoProvider(props){
     //useHooks:
     const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage("TODOS_V1");
+
     const [searchValue, setSearchValue] = React.useState("");
     const [showOnlyCompleted, setShowOnlyCompleted] = React.useState(false);
 
@@ -30,6 +31,12 @@ function TodoProvider(props){
         saveTodos(newTodos);
     };
 
+    const addTodo = (text)=>{
+        const newTodos = [...todos];
+        newTodos.unshift({text, completed: false});
+        saveTodos(newTodos);
+    }
+
     const changeShowedTodos = () => setShowOnlyCompleted(!showOnlyCompleted);
 
     return (
@@ -38,15 +45,19 @@ function TodoProvider(props){
 			error,
             completedTodos,
             sizeTodos,
+            
             searchValue,
             setSearchValue,
+
+            showOnlyCompleted,
+            changeShowedTodos,
+
             searchedTodos: 
                 !showOnlyCompleted
                     ? searchedTodos
                     : searchedTodos.filter(todos => todos.completed),
             setStateTodo,
-            showOnlyCompleted,
-            changeShowedTodos,
+            addTodo
         }}>
             {props.children}
         </TodoContext.Provider>

@@ -1,0 +1,36 @@
+.form{
+    padding: 2em;
+    background: var(--modal-bg);
+    border-radius: 1em;
+}
+
+.form .form-icon img{
+    width: 20em;
+}
+
+.form textarea{
+    width: 100%;
+    min-height: 10em;
+    margin:1em 0;
+    padding: .5em;
+    resize: vertical;
+}
+
+.form button {
+    display: block;
+    width: 100%;
+    padding: .5em;
+
+    border:0;
+    border-radius: .5em;
+    font-size: 15px;
+
+    background: var(--active-color);
+    color: var(--text-color);
+
+    cursor: pointer;
+}
+
+.form button:hover{
+    opacity: .9;
+}

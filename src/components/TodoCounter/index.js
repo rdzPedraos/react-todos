@@ -1,9 +1,12 @@
 import React from "react";
 import './TodoCounter.css';
+import { TodoContext } from "../../TodoContext";
 
-function TodoCounter({completedTodos, totalTodos}){
-    const percentage = totalTodos > 0
-        ? Math.trunc(completedTodos/totalTodos * 100) + '%'
+function TodoCounter(){
+    const { completedTodos, sizeTodos } = React.useContext(TodoContext);
+
+    const percentage = sizeTodos > 0
+        ? Math.trunc(completedTodos.length/sizeTodos * 100) + '%'
         : '0%';
 
     return (
