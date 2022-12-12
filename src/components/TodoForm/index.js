@@ -4,12 +4,16 @@ import './form.css';
 
 function TodoForm({closeModal}){
     const [newTodoValue, setNewTodoValue] = React.useState('');
+    const [error, setError] = React.useState('');
     const {addTodo} = React.useContext(TodoContext);
 
     const onSubmit = (ev) => {
         ev.preventDefault();
-        addTodo(newTodoValue);
-        closeModal();
+        if( newTodoValue ){
+            addTodo(newTodoValue);
+            closeModal();
+        }
+        else setError('Debe existir al menos un caracter en la tarea.');
     }
 
     return (
@@ -21,6 +25,7 @@ function TodoForm({closeModal}){
                     onChange={ (ev)=>setNewTodoValue(ev.target.value) }
                     placeholder="I must to do the homework..."
                 />
+                <p class="error">{error}</p>
                 
                 <button type="submit">Guardar</button>
             </form>
