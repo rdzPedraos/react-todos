@@ -8,3 +8,8 @@ root.render(
   <App />
 );
 
+/**
+ * For deploy use command:
+ * npm install --save-dev gh-pages
+ */
+
